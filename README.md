@@ -1,3 +1,11 @@
+Carhub is an E-commerce motor-vehicle and services related to them
+the project is comprised of the latest technologies. ie backend - nodejs & express js and other external libraries.
+# challenges
+i built this project with the gathered knowldge of a self taught developer. the project took some time to actualize as i had at some point to hold inorder to learn a new thing that needs to be implemented (i miss teamwork)
+
+
+
+
 # USER
 
 super user
@@ -92,12 +100,45 @@ list followers
  - name
  * if type === 'merchant? link to user
  **folowUser**
- [] - get user to follow from req.params
- [] - find if user is available in db
- [] - if user does not exist create new user with current follower
- [] - if exists check if you follow this user. if not update the user.followers with a new follower
+ [x] - get user to follow from req.params
+ [x] - check if the req.params.id is same as req.user ## not to follow yourself
+ [x] - check the current user (req.user) from the followers schema.
+ [x] - if the user exists
+    - check if the follower already exists in the followers array
+    - if not, add the new follower to the followers array
+[x] - if user doesnt exists
+    - create the user
+    - add the req.user to the followers array
+
+**unfollowUser**
+[x] - get the userid from req.params
+[x] - filter the followers array and return the new array without the follower
+[x] - update the followers array
+
+**blockUser**
+[x] - get user from req.params
+[x] - check if you have a followers/blocked schema
+[x] - if exists, add the new user to the blocked list
+[x] - if doesnt exists, create new and add the user to the blocked users array
+
+**unblockUser**
+[x] - get the user from req.params
+[x] - filter the blocked users, return the new blocked users without the req.params.id from the new array and update.
+
+**viewwhoFollows**
+[x] - view who follows you
+        - followers.followers
+
+**viewYourFollowing**
+[x] - get all users
+[x] - loop through the followersSchema followers array and get every user who i follow
+[x] - get each user from the Users schema
+
+**sendFollowRequest**
+[x] - send request to the user through req.params
+[x] - check if you already follow the user or blocked by the user
+[x] - send request to the user and send notification email to the user
+ 
 
 
 
-# carhub
-# carhub

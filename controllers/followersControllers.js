@@ -254,6 +254,9 @@ const deleteRequest = async(req, res)=>{
     res.status(StatusCodes.OK).json({msg:`${user_name.name}'s request deleted successfully`})
 }
 
+
+
+
 const notifyFollowRequest = async(req, res)=>{
     res.send('notify fellowship request')
 }
