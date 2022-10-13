@@ -16,10 +16,12 @@ app.use(express.json());
 const productRoute = require("./routes/productsRoute");
 const authenticationRoute = require("./routes/authRoute");
 const followers = require('./routes/followersRoute')
+const payments = require('./routes/paymentRoutes')
 
 app.use("/api/v1/products", productRoute);
 app.use("/api/v1/authentication", authenticationRoute);
 app.use('/api/v1/followers', followers)
+app.use('/api/v1/payments', payments)
 
 app.use(erroHandlerMiddleware);
 

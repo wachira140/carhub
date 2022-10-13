@@ -113,6 +113,14 @@ const CarModel = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    subscription:{
+      type:String,
+      enum:['Active', 'Pending', 'Expired'],
+      default:'Pending'
+    },
+    subscription_time:{
+      type:Date,
+    }
   },
   { timestamps: true }
 );

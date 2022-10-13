@@ -139,6 +139,22 @@ list followers
 [x] - check if you already follow the user or blocked by the user
 [x] - send request to the user and send notification email to the user
  
+ # Payments
+ **payActivation**
+ [] - get item id's from req.body
+ [] - find if the id exists in the motorsschema
+ [] - confirm the amount to be charged and multiply with the number of products/items
+ [] - send the amount to be charged to mpesa
+    **Till**
+    update amount to the db and send the prompt to the subscribers phone
+    **Paybill**
+    - generate account name
+    - check if the generated account name == name supplied on payments
+    - check if amount paid is less than amount to be paid
+    - update items to active
+    - update subscription_time:Date.now()
+
+
 
 
 
